@@ -1,8 +1,4 @@
 
-default:
-  script:
-    - yarn
-
 image: node:8.11
 
 cache:
@@ -12,7 +8,7 @@ cache:
 stages:
   - test
 
-test_async:
+default:
   stage: test
   script:
     - npm install -g yarn
