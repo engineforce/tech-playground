@@ -1,0 +1,22 @@
+{
+  "name": "user-web",
+  "version": "0.1.0",
+  "scripts": {
+    "dev": "react-scripts start",
+    "build": "react-scripts build",
+    "start": "serve -s build",
+    "test": "tsc && react-scripts test --coverage --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "dependencies": {
+    "react": "^16.4.0",
+    "react-dom": "^16.4.0",
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "1.1.4",
+    "react-toastify": "^4.1.0",
+    "recompose": "^0.27.1"
+  },
+  "devDependencies": {
+    "serve": "^9.3.0"
+  }
+}

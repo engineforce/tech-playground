@@ -1,0 +1,27 @@
+{
+  "name": "external-command-lib",
+  "version": "0.1.1",
+  "description": "External command lib",
+  "main": "./dist/index.js",
+  "author": "Paul Li",
+  "license": "UNLICENSED",
+  "scripts": {
+    "test": "yarn run test-unit",
+    "test-unit": "jest --testPathPattern \\.unit\\.test\\.",
+    "build": "tsc && poi build",
+    "watch": "tsc -w"
+  },
+  "dependencies": {
+    "lodash": "^4.17.10",
+    "loglevel": "^1.6.1",
+    "tree-kill": "^1.2.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.0.0-beta.56",
+    "babel-core": "^7.0.0-0",
+    "babel-jest": "^23.4.2",
+    "jest": "^23.4.2",
+    "regenerator-runtime": "^0.12.1",
+    "typescript": "^3.0.1"
+  }
+}

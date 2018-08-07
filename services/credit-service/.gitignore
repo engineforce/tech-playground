@@ -1,0 +1,9 @@
+# Serverless directories
+.serverless
+
+# golang output binary directory
+/bin
+/pkg
+
+# golang vendor (dependencies) directory
+vendor

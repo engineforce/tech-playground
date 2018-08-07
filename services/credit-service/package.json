@@ -1,0 +1,17 @@
+{
+  "name": "credit-service",
+  "version": "0.0.1",
+  "description": "Credit service",
+  "author": "Paul Li",
+  "license": "UNLICENSED",
+  "scripts": {
+    "clean": "find . -iname 'bin' | xargs rm -rf",
+    "build":
+      "((rm -rf $GOPATH/src/$npm_package_name || true) && ln -s $(pwd) $GOPATH/src/$npm_package_name && cd $GOPATH/src/$npm_package_name/src && make)",
+    "rebuild": "yarn run clean && yarn run build",
+    "test-invoke": "sls invoke -f hello",
+    "package": "yarn run build && sls package",
+    "deploy": "yarn run build && sls deploy",
+    "undeploy": "sls remove"
+  }
+}

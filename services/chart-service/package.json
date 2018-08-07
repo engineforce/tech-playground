@@ -1,0 +1,18 @@
+{
+  "name": "chart-service",
+  "version": "0.0.1",
+  "description": "Chart service",
+  "author": "Paul Li",
+  "license": "UNLICENSED",
+  "scripts": {
+    "clean":
+      "find . -iname 'bin' | xargs rm -rf && find . -iname 'obj' | xargs rm -rf",
+    "build": "dotnet build",
+    "rebuild": "yarn run clean && yarn run build",
+    "test": "(cd ChartService.Tests && dotnet test)",
+    "test-invoke": "sls invoke -f hello",
+    "package": "(cd ChartService && bash ./build.sh) && sls package",
+    "deploy": "(cd ChartService && bash ./build.sh) && sls deploy",
+    "undeploy": "sls remove"
+  }
+}

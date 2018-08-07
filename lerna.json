@@ -1,0 +1,16 @@
+{
+  "lerna": "2.11.0",
+  "npmClient": "yarn",
+  "useWorkspaces": true,
+  "loglevel": "info",
+  "commands": {
+    "publish": {
+      "allowBranch": "master",
+      "message": "Publish packages. [skip ci]",
+      "skipNpm": true,
+      "ignore": ["serverless-appsync-plugin"]
+    }
+  },
+  "packages": ["packages/*", "services/*", "clients/*"],
+  "version": "independent"
+}

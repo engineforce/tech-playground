@@ -1,0 +1,42 @@
+service: user-service
+
+frameworkVersion: ">=1.21.0 <2.0.0"
+
+plugins:
+  - serverless-webpack
+  - serverless-plugin-tracing
+
+provider:
+  name: aws
+  runtime: nodejs8.10
+  region: ap-southeast-2
+  memorySize: 512 # Overwrite the default memory size. Default is 1024
+  versionFunctions: false # Optional function versioning
+  timeout: 30
+  stage: ${opt:stage, 'dev'}
+  environment:
+    NODE_CONFIG_ENV: ${self:provider.stage}
+  stackTags:
+    deployment: ${self:provider.stage}
+    service: ${self:service}
+    updatedBy: ${env:USER}
+  tracing: true # enable x-ray tracing
+  iamRoleStatements:
+    - Effect: "Allow" # xray permissions (required) 
+      Action:
+        - "xray:PutTraceSegments"
+        - "xray:PutTelemetryRecords"
+      Resource:
+        - "*"
+
+custom:
+  webpack:
+    includeModules:
+      forceExclude:
+        - aws-sdk
+    packager: 'yarn'
+    packagerOptions: {}
+      
+functions:
+  getUsers:
+    handler: src/index.getUsers

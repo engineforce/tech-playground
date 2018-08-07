@@ -1,0 +1,18 @@
+{
+  "name": "trade-service",
+  "version": "0.0.1",
+  "description": "Trade service",
+  "author": "Paul Li",
+  "license": "UNLICENSED",
+  "scripts": {
+    "clean":
+      "find . -iname 'bin' | xargs rm -rf && find . -iname 'obj' | xargs rm -rf",
+    "build": "dotnet build",
+    "rebuild": "yarn run clean && yarn run build",
+    "test": "(cd TradeService.Tests && dotnet test)",
+    "test-invoke": "sls invoke -f hello",
+    "package": "(cd TradeService && bash ./build.sh) && sls package",
+    "deploy": "(cd TradeService && bash ./build.sh) && sls deploy",
+    "undeploy": "sls remove"
+  }
+}
