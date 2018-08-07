@@ -22,16 +22,6 @@
     "string-lib": "^0.0.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.0.0-beta.54",
-    "@babel/preset-env": "^7.0.0-beta.54",
-    "babel-loader": "^8.0.0-beta",
-    "babel-plugin-lodash": "^3.3.4",
-    "eslint": "^4.19.1",
-    "eslint-config-airbnb-base": "^13.0.0",
-    "eslint-plugin-import": "^2.12.0",
-    "external-command-lib": "^0.1.1",
-    "serverless-plugin-tracing": "^2.0.0",
-    "serverless-webpack": "^5.1.5",
-    "webpack": "^4.14.0"
+    "external-command-lib": "^0.1.1"
   }
 }

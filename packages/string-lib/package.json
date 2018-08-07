@@ -11,10 +11,5 @@
   },
   "dependencies": {
     "lodash": "^4.17.10"
-  },
-  "devDependencies": {
-    "eslint": "^4.19.1",
-    "eslint-config-airbnb-base": "^13.0.0",
-    "eslint-plugin-import": "^2.12.0"
   }
 }
