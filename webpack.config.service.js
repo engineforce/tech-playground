@@ -1,7 +1,7 @@
 const path = require('path');
 const slsw = require('serverless-webpack');
 
-module.exports = (basePath) => {
+function getBaseConfig(basePath) {
   return {
     entry: slsw.lib.entries,
     target: 'node',
@@ -21,4 +21,6 @@ module.exports = (basePath) => {
       rules: [{ test: /\.js(x?)$/, loader: 'babel-loader' }],
     },
   };
-};
+}
+
+module.exports = { getBaseConfig };
