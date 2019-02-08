@@ -1,3 +1,6 @@
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/engineforce/tech-playground.svg)](https://greenkeeper.io/)
+
 ```
 clients/
     portfolio-web:
