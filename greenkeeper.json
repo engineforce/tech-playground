@@ -1,0 +1,21 @@
+{
+  "groups": {
+    "default": {
+      "packages": [
+        "clients/chart-web/package.json",
+        "clients/investing-rn/package.json",
+        "clients/portfolio-web/package.json",
+        "clients/user-web/package.json",
+        "package.json",
+        "packages/async-lib/package.json",
+        "packages/aws-lambda-helpers/package.json",
+        "packages/external-command-lib/package.json",
+        "packages/string-lib/package.json",
+        "services/chart-service/package.json",
+        "services/credit-service/package.json",
+        "services/trade-service/package.json",
+        "services/user-service/package.json"
+      ]
+    }
+  }
+}
