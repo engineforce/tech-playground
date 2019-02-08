@@ -14,12 +14,12 @@
     "undeploy": "sls remove"
   },
   "dependencies": {
-    "aws-lambda-helpers": "^0.0.10",
+    "aws-lambda-helpers": "^0.1.6",
     "immutable-assign": "^2.0.6",
     "lodash": "^4.17.10",
     "loglevel": "^1.6.1",
-    "ramda": "^0.25.0",
-    "string-lib": "^0.0.1"
+    "ramda": "^0.26.1",
+    "string-lib": "^1.0.1"
   },
   "devDependencies": {
     "external-command-lib": "^0.1.1"
